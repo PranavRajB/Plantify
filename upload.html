@@ -31,53 +31,76 @@
         <p>
           Select the type of plant and upload an image to identify diseases:
         </p>
-        <form id="upload-form">
+        <form id="upload-form" enctype="multipart/form-data">
+          <!-- Hidden input to store the selected plant type -->
+          <input type="hidden" name="plant-type" id="plant-type-input" />
+
           <div class="row">
             <div class="col-md-3">
-              <div class="plant-option">
+              <div class="plant-option" onclick="showPlantImage('cashew')">
                 <label>
-                  <input type="radio" name="plant-type" value="cashew" />
+                  <input
+                    type="radio"
+                    name="plant-type-radio"
+                    value="cashew"
+                    onclick="setSelectedPlant('cashew')"
+                  />
                   <div class="image-container">
-                    <img src="images/cashew.jpeg" alt="Cashew" />
+                    <img src="images/cashew.jpg" alt="Cashew" />
                   </div>
                   <p>Cashew</p>
                 </label>
               </div>
             </div>
+            <!-- Repeat for other plant options -->
             <div class="col-md-3">
-              <div class="plant-option">
+              <div class="plant-option" onclick="showPlantImage('casavva')">
                 <label>
-                  <input type="radio" name="plant-type" value="cassava" />
+                  <input
+                    type="radio"
+                    name="plant-type-radio"
+                    value="casavva"
+                    onclick="setSelectedPlant('casavva')"
+                  />
                   <div class="image-container">
-                    <img src="images/cassava.jpeg" alt="cassava" />
+                    <img src="images/casavva.jpg" alt="casavva" />
                   </div>
-                  <p>cassava</p>
+                  <p>casavva</p>
                 </label>
               </div>
             </div>
             <div class="col-md-3">
-              <div class="plant-option">
+              <div class="plant-option" onclick="showPlantImage('tomato')">
                 <label>
-                  <input type="radio" name="plant-type" value="tomato" />
+                  <input
+                    type="radio"
+                    name="plant-type-radio"
+                    value="tomato"
+                    onclick="setSelectedPlant('tomato')"
+                  />
                   <div class="image-container">
-                    <img src="images/tomato.jpeg" alt="tomato" />
+                    <img src="images/tomato.jpg" alt="tomato" />
                   </div>
                   <p>tomato</p>
                 </label>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="plant-option">
-                <label>
-                  <input type="radio" name="plant-type" value="maize" />
-                  <div class="image-container">
-                    <img src="images/maize.jpeg" alt="maize" />
-                  </div>
-                  <p>cassava</p>
-                </label>
-              </div>
+          </div>
+          <div class="col-md-3">
+            <div class="plant-option" onclick="showPlantImage('maize')">
+              <label>
+                <input
+                  type="radio"
+                  name="plant-type-radio"
+                  value="maize"
+                  onclick="setSelectedPlant('maize')"
+                />
+                <div class="image-container">
+                  <img src="images/maize.jpg" alt="maize" />
+                </div>
+                <p>maize</p>
+              </label>
             </div>
-            <!-- Repeat the structure for other plant options -->
           </div>
           <div class="form-group">
             <label for="image-input">Upload Image:</label>
@@ -86,9 +109,13 @@
               class="form-control-file"
               accept="image/*"
               id="image-input"
+              name="image"
+              required
             />
           </div>
-          <button type="submit" class="btn btn-primary">Upload</button>
+          <button type="button" class="btn btn-primary" onclick="submitForm()">
+            Upload
+          </button>
         </form>
       </section>
     </main>
@@ -100,5 +127,54 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      // Function to display the selected plant image
+      function showPlantImage(plantType) {
+        const imageContainer = document.getElementById("selected-plant-image");
+        const imagePath = `images/${plantType}.jpg`; // Assuming images are named after plant types
+        imageContainer.innerHTML = `<img src="${imagePath}" alt="${plantType}">`;
+
+        // Set the selected plant type in the hidden input field
+        document.getElementById("plant-type-input").value = plantType;
+      }
+
+      // Function to set the selected plant type when the radio button is clicked
+      function setSelectedPlant(plantType) {
+        document.getElementById("plant-type-input").value = plantType;
+      }
+
+      // Function to submit the form
+      // Function to submit the form
+      function submitForm() {
+        const selectedPlant = document.getElementById("plant-type-input").value;
+        const selectedImage = document.getElementById("image-input").files[0];
+
+        if (selectedPlant && selectedImage) {
+          // Create a FormData object to send the data as a multipart/form-data
+          const formData = new FormData();
+          formData.append("plant_type", selectedPlant);
+          formData.append("image", selectedImage);
+
+          // Make a POST request to the Flask backend using fetch
+          fetch("http://localhost:3000/upload", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              // Handle the response from the backend
+              console.log("Response from backend:", data);
+
+              // Optionally, you can redirect to the result page or perform other actions
+            })
+            .catch((error) => {
+              console.error("Error communicating with the backend:", error);
+            });
+        } else {
+          alert("Please select a plant type and upload an image.");
+        }
+      }
+    </script>
   </body>
 </html>
