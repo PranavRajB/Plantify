@@ -46,7 +46,7 @@
                     onclick="setSelectedPlant('cashew')"
                   />
                   <div class="image-container">
-                    <img src="images/cashew.jpg" alt="Cashew" />
+                    <img src="images/cashew.jpeg" alt="Cashew" />
                   </div>
                   <p>Cashew</p>
                 </label>
@@ -54,18 +54,18 @@
             </div>
             <!-- Repeat for other plant options -->
             <div class="col-md-3">
-              <div class="plant-option" onclick="showPlantImage('casavva')">
+              <div class="plant-option" onclick="showPlantImage('cassava')">
                 <label>
                   <input
                     type="radio"
                     name="plant-type-radio"
-                    value="casavva"
-                    onclick="setSelectedPlant('casavva')"
+                    value="cassava"
+                    onclick="setSelectedPlant('cassava')"
                   />
                   <div class="image-container">
-                    <img src="images/casavva.jpg" alt="casavva" />
+                    <img src="images/cassava.jpeg" alt="cassava" />
                   </div>
-                  <p>casavva</p>
+                  <p>cassava</p>
                 </label>
               </div>
             </div>
@@ -79,7 +79,7 @@
                     onclick="setSelectedPlant('tomato')"
                   />
                   <div class="image-container">
-                    <img src="images/tomato.jpg" alt="tomato" />
+                    <img src="images/tomato.jpeg" alt="tomato" />
                   </div>
                   <p>tomato</p>
                 </label>
@@ -96,7 +96,7 @@
                   onclick="setSelectedPlant('maize')"
                 />
                 <div class="image-container">
-                  <img src="images/maize.jpg" alt="maize" />
+                  <img src="images/maize.jpeg" alt="maize" />
                 </div>
                 <p>maize</p>
               </label>
@@ -132,7 +132,7 @@
       // Function to display the selected plant image
       function showPlantImage(plantType) {
         const imageContainer = document.getElementById("selected-plant-image");
-        const imagePath = `images/${plantType}.jpg`; // Assuming images are named after plant types
+        const imagePath = `images/${plantType}.jpeg`; // Assuming images are named after plant types
         imageContainer.innerHTML = `<img src="${imagePath}" alt="${plantType}">`;
 
         // Set the selected plant type in the hidden input field
