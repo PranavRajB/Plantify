@@ -6,8 +6,11 @@ import matplotlib.pyplot as plt
 import  numpy as np
 from flask import jsonify
 from predict_disease import prediction_disease_type
+
+
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/plantify"
+app.static_folder = "static/"
 mongo = PyMongo(app)
 
 # Function to load pickled models
@@ -56,7 +59,8 @@ def upload():
         print('Redirecting to result page')
 
         # Redirect to the result page, passing necessary data
-        return redirect(url_for('result', predicted_disease=predicted_disease, remedy=remedy))
+        # return redirect(url_for('result', predicted_disease=predicted_disease, remedy=remedy))
+        return render_template('result.html', predicted_disease=predicted_disease, remedy=remedy)
 
     return render_template('upload.html')
 

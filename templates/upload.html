@@ -48,7 +48,7 @@
                     onclick="setSelectedPlant('apple')"
                   />
                   <div class="image-container">
-                    <img src="../images/apple.jpg" alt="Apple" />
+                    <img src="static/images/apple.jpg" alt="Apple" />
                   </div>
                   <p>Apple</p>
                 </label>
@@ -66,7 +66,7 @@
                     onclick="setSelectedPlant('blueberry')"
                   />
                   <div class="image-container">
-                    <img src="../images/blueberry.jpg" alt="Blueberry" />
+                    <img src="static/images/blueberry.jpg" alt="Blueberry" />
                   </div>
                   <p>Blueberry</p>
                 </label>
@@ -84,7 +84,7 @@
                     onclick="setSelectedPlant('cherry')"
                   />
                   <div class="image-container">
-                    <img src="../images/cherry.jpg" alt="Cherry" />
+                    <img src="static/images/cherry.jpg" alt="Cherry" />
                   </div>
                   <p>Cherry</p>
                 </label>
@@ -102,7 +102,7 @@
                     onclick="setSelectedPlant('corn')"
                   />
                   <div class="image-container">
-                    <img src="../images/corn.jpg" alt="Corn" />
+                    <img src="static/images/corn.jpg" alt="Corn" />
                   </div>
                   <p>Corn</p>
                 </label>
@@ -120,7 +120,7 @@
                     onclick="setSelectedPlant('grape')"
                   />
                   <div class="image-container">
-                    <img src="../images/grape.jpg" alt="Grape" />
+                    <img src="static/images/grape.jpg" alt="Grape" />
                   </div>
                   <p>Grape</p>
                 </label>
@@ -138,7 +138,7 @@
                     onclick="setSelectedPlant('orange')"
                   />
                   <div class="image-container">
-                    <img src="../images/orange.jpg" alt="Orange" />
+                    <img src="static/images/orange.jpg" alt="Orange" />
                   </div>
                   <p>Orange</p>
                 </label>
@@ -156,7 +156,7 @@
                     onclick="setSelectedPlant('peach')"
                   />
                   <div class="image-container">
-                    <img src="../images/peach.jpg" alt="Peach" />
+                    <img src="static/images/peach.jpg" alt="Peach" />
                   </div>
                   <p>Peach</p>
                 </label>
@@ -174,7 +174,7 @@
                     onclick="setSelectedPlant('pepper')"
                   />
                   <div class="image-container">
-                    <img src="../images/pepper.jpg" alt="Pepper" />
+                    <img src="static/images/pepper.jpg" alt="Pepper" />
                   </div>
                   <p>Pepper</p>
                 </label>
@@ -192,7 +192,7 @@
                     onclick="setSelectedPlant('potato')"
                   />
                   <div class="image-container">
-                    <img src="../images/potato.jpg" alt="Potato" />
+                    <img src="static/images/potato.jpg" alt="Potato" />
                   </div>
                   <p>Potato</p>
                 </label>
@@ -210,7 +210,7 @@
                     onclick="setSelectedPlant('raspberry')"
                   />
                   <div class="image-container">
-                    <img src="../images/raspberry.jpg" alt="Raspberry" />
+                    <img src="static/images/raspberry.jpg" alt="Raspberry" />
                   </div>
                   <p>Raspberry</p>
                 </label>
@@ -264,7 +264,7 @@
                     onclick="setSelectedPlant('strawberry')"
                   />
                   <div class="image-container">
-                    <img src="../images/strawberry.jpg" alt="Strawberry" />
+                    <img src="static/images/strawberry.jpg" alt="Strawberry" />
                   </div>
                   <p>Strawberry</p>
                 </label>
@@ -282,7 +282,7 @@
                     onclick="setSelectedPlant('tomato')"
                   />
                   <div class="image-container">
-                    <img src="../images/tomato.jpg" alt="Tomato" />
+                    <img src="static/images/tomato.jpg" alt="Tomato" />
                   </div>
                   <p>Tomato</p>
                 </label>
@@ -316,6 +316,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
+        window.addEventListener("popstate", _ => {
+          window.location.reload()
+        })
       // Function to display the selected plant image
       function showPlantImage(plantType) {
         const imageContainer = document.getElementById("selected-plant-image");
@@ -348,14 +351,19 @@
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        return response.json();
+        // return response.json();
+        return response.text();
       })
       .then(data => {
         // Handle the response from the backend
         console.log("Response from backend:", data);
 
         // Redirect to the result page
-        window.location.href = "/result";
+        // window.location.href = "/result";
+        window.history.pushState({ data }, "", "/result")
+        window.document.body.innerHTML = data
+
+
       })
       .catch(error => {
         console.error("Error communicating with the backend:", error);
