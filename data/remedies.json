@@ -3,90 +3,90 @@
     "disease": "Scab",
     "remedy": "Apply fungicides such as sulfur or copper-based sprays.",
     "product": "Fungicide XYZ",
-    "image": "images/scab_product_image.jpg"
+    "image": "static/images/scab_product_image.jpg"
   },
   {
     "disease": "Black Rot",
     "remedy": "Prune infected branches and apply fungicides during the growing season.",
     "product": "Anti-Rot Solution",
-    "image": "images/black_rot_product_image.jpg"
+    "image": "static/images/black_rot_product_image.jpg"
   },
   {
     "disease": "Rust",
     "remedy": "Use fungicides and practice good garden hygiene.",
     "product": "Rust Control Spray",
-    "image": "images/rust_product_image.jpg"
+    "image": "static/images/rust_product_image.jpg"
   },
   {
     "disease": "Powdery Mildew",
     "remedy": "Apply fungicides and maintain proper air circulation.",
     "product": "Anti-Mildew Spray",
-    "image": "images/mildew_product_image.jpg"
+    "image": "static/images/mildew_product_image.jpg"
   },
   {
     "disease": "Leaf Blight",
     "remedy": "Practice good garden hygiene and use resistant varieties.",
     "product": "Blight Defense Spray",
-    "image": "images/leaf_blight_product_image.jpg"
+    "image": "static/images/leaf_blight_product_image.jpg"
   },
   {
     "disease": "Bacterial Spot",
     "remedy": "Apply copper-based sprays and practice good garden hygiene.",
     "product": "Spotless Protector Spray",
-    "image": "images/bacterial_spot_product_image.jpg"
+    "image": "static/images/bacterial_spot_product_image.jpg"
   },
   {
     "disease": "Early Blight",
     "remedy": "Apply fungicides, practice crop rotation, and remove infected plant parts.",
     "product": "Early Blight Banisher",
-    "image": "images/early_blight_product_image.jpg"
+    "image": "static/images/early_blight_product_image.jpg"
   },
   {
     "disease": "Late Blight",
     "remedy": "Apply fungicides, practice crop rotation, and remove infected plant parts.",
     "product": "Late Blight Guardian",
-    "image": "images/late_blight_product_image.jpg"
+    "image": "static/images/late_blight_product_image.jpg"
   },
   {
     "disease": "Leaf Mold",
     "remedy": "Provide good air circulation, avoid overhead watering.",
     "product": "Mold Control Spray",
-    "image": "images/leaf_mold_product_image.jpg"
+    "image": "static/images/leaf_mold_product_image.jpg"
   },
   {
     "disease": "Septoria Leaf Spot",
     "remedy": "Apply fungicides and practice good garden hygiene.",
     "product": "Septoria Shield",
-    "image": "images/septoria_leaf_spot_product_image.jpg"
+    "image": "static/images/septoria_leaf_spot_product_image.jpg"
   },
   {
     "disease": "Spider Mite",
     "remedy": "Use insecticidal soap, neem oil, or predatory mites.",
     "product": "Mite Terminator",
-    "image": "images/spider_mite_product_image.jpg"
+    "image": "static/images/spider_mite_product_image.jpg"
   },
   {
     "disease": "Yellow Leaf Curl Virus",
     "remedy": "Use disease-resistant varieties and control whiteflies.",
     "product": "Virus Shield",
-    "image": "images/yellow_leaf_curl_virus_product_image.jpg"
+    "image": "static/images/yellow_leaf_curl_virus_product_image.jpg"
   },
   {
     "disease": "Mosaic Virus",
     "remedy": "Control aphids and practice good garden hygiene.",
     "product": "Mosaic Virus Defender",
-    "image": "images/mosaic_virus_product_image.jpg"
+    "image": "static/images/mosaic_virus_product_image.jpg"
   },
   {
     "disease": "Citrus Canker",
     "remedy": "Prune and destroy infected plant parts, apply copper-based sprays.",
     "product": "Canker Terminator Spray",
-    "image": "images/citrus_canker_product_image.jpg"
+    "image": "static/images/citrus_canker_product_image.jpg"
   },
   {
     "disease": "Anthracnose",
     "remedy": "Apply fungicides and practice good garden hygiene.",
     "product": "Anthracnose Shield",
-    "image": "images/anthracnose_raspberry_product_image.jpg"
+    "image": "static/images/anthracnose_raspberry_product_image.jpg"
   }
 ]

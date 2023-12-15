@@ -332,33 +332,38 @@
       }
 
       function submitForm() {
-        const selectedPlant = document.getElementById("plant-type-input").value;
-        const selectedImage = document.getElementById("image-input").files[0];
+  const selectedPlant = document.getElementById("plant-type-input").value;
+  const selectedImage = document.getElementById("image-input").files[0];
 
-        if (selectedPlant && selectedImage) {
-          const formData = new FormData();
-          formData.append("plant_type", selectedPlant);
-          formData.append("image", selectedImage);
+  if (selectedPlant && selectedImage) {
+    const formData = new FormData();
+    formData.append("plant_type", selectedPlant);
+    formData.append("image", selectedImage);
 
-          fetch("http://127.0.0.1:5000/upload", {
-            method: "POST",
-            body: formData,
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              // Handle the response from the backend
-              console.log("Response from backend:", data);
-
-              // Redirect to the result page
-              window.location.href = "/result";
-            })
-            .catch((error) => {
-              console.error("Error communicating with the backend:", error);
-            });
-        } else {
-          alert("Please select a plant type and upload an image.");
+    fetch("http://127.0.0.1:5000/upload", {
+      method: "POST",
+      body: formData,
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
         }
-      }
+        return response.json();
+      })
+      .then(data => {
+        // Handle the response from the backend
+        console.log("Response from backend:", data);
+
+        // Redirect to the result page
+        window.location.href = "/result";
+      })
+      .catch(error => {
+        console.error("Error communicating with the backend:", error);
+      });
+  } else {
+    alert("Please select a plant type and upload an image.");
+  }
+}
 
     </script>
   </body>
