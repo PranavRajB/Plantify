@@ -1,0 +1,226 @@
+[
+  {
+    "plant": "Apple",
+    "diseases": [
+      {
+        "name": "Scab",
+        "remedy": "Apply fungicides such as sulfur or copper-based sprays.",
+        "product": "Fungicide XYZ"
+      },
+      {
+        "name": "Black Rot",
+        "remedy": "Prune infected branches and apply fungicides during the growing season.",
+        "product": "Anti-Rot Solution"
+      },
+      {
+        "name": "Rust",
+        "remedy": "Use fungicides and practice good garden hygiene.",
+        "product": "Rust Control Spray"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Cherry",
+    "diseases": [
+      {
+        "name": "Powdery Mildew",
+        "remedy": "Apply fungicides and practice good air circulation.",
+        "product": "Anti-Mildew Spray"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Corn",
+    "diseases": [
+      {
+        "name": "Cercospora",
+        "remedy": "Apply fungicides and practice crop rotation.",
+        "product": "Cercospora Fighter"
+      },
+      {
+        "name": "Rust",
+        "remedy": "Use resistant varieties and fungicides.",
+        "product": "Rust-Resistant Seeds"
+      },
+      {
+        "name": "Leaf Blight",
+        "remedy": "Practice good garden hygiene and use resistant varieties.",
+        "product": "Blight Defense Spray"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Grape",
+    "diseases": [
+      {
+        "name": "Black Rot",
+        "remedy": "Prune and destroy infected plant parts, apply fungicides.",
+        "product": "Black Rot Terminator"
+      },
+      {
+        "name": "Black Measles",
+        "remedy": "Apply fungicides and practice good vineyard hygiene.",
+        "product": "Measles Guard Spray"
+      },
+      {
+        "name": "Leaf Blight",
+        "remedy": "Apply fungicides, practice good pruning, and provide adequate air circulation.",
+        "product": "Leaf Blight Shield"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Peach",
+    "diseases": [
+      {
+        "name": "Bacterial Spot",
+        "remedy": "Apply copper-based sprays and practice good orchard hygiene.",
+        "product": "Spotless Peach Spray"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Pepper",
+    "diseases": [
+      {
+        "name": "Bacterial Spot",
+        "remedy": "Apply copper-based sprays and practice good garden hygiene.",
+        "product": "Pepper Protector Spray"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Potato",
+    "diseases": [
+      {
+        "name": "Early Blight",
+        "remedy": "Apply fungicides, practice crop rotation, and remove infected plant parts.",
+        "product": "Early Blight Banisher"
+      },
+      {
+        "name": "Late Blight",
+        "remedy": "Apply fungicides, practice crop rotation, and remove infected plant parts.",
+        "product": "Late Blight Guardian"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Strawberry",
+    "diseases": [
+      {
+        "name": "Leaf Scorch",
+        "remedy": "Plant resistant varieties, apply fungicides, and provide proper irrigation.",
+        "product": "Scorch Shield"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Tomato",
+    "diseases": [
+      {
+        "name": "Early Blight",
+        "remedy": "Apply fungicides, practice crop rotation, and remove infected plant parts.",
+        "product": "Early Blight Banisher"
+      },
+      {
+        "name": "Late Blight",
+        "remedy": "Apply fungicides, practice crop rotation, and remove infected plant parts.",
+        "product": "Late Blight Guardian"
+      },
+      {
+        "name": "Bacterial Spot",
+        "remedy": "Apply copper-based sprays and practice good garden hygiene.",
+        "product": "Bacterial Spot Shield"
+      },
+      {
+        "name": "Leaf Mold",
+        "remedy": "Provide good air circulation, avoid overhead watering.",
+        "product": "Mold Control Spray"
+      },
+      {
+        "name": "Septoria Leaf Spot",
+        "remedy": "Apply fungicides and practice good garden hygiene.",
+        "product": "Septoria Shield"
+      },
+      {
+        "name": "Spider Mite",
+        "remedy": "Use insecticidal soap, neem oil, or predatory mites.",
+        "product": "Mite Terminator"
+      },
+      {
+        "name": "Yellow Leaf Curl Virus",
+        "remedy": "Use disease-resistant varieties and control whiteflies.",
+        "product": "Virus Shield"
+      },
+      {
+        "name": "Mosaic Virus",
+        "remedy": "Control aphids and practice good garden hygiene.",
+        "product": "Mosaic Virus Defender"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Blueberry",
+    "diseases": [
+      {
+        "name": "Powdery Mildew",
+        "remedy": "Apply fungicides and maintain proper air circulation.",
+        "product": "Mildew Control Spray"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Orange",
+    "diseases": [
+      {
+        "name": "Citrus Canker",
+        "remedy": "Prune and destroy infected plant parts, apply copper-based sprays.",
+        "product": "Canker Terminator Spray"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Raspberry",
+    "diseases": [
+      {
+        "name": "Anthracnose",
+        "remedy": "Apply fungicides and practice good garden hygiene.",
+        "product": "Anthracnose Shield"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Soybean",
+    "diseases": [
+      {
+        "name": "Soybean Rust",
+        "remedy": "Apply fungicides and practice crop rotation.",
+        "product": "Rust-Buster for Soybean"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  },
+  {
+    "plant": "Squash",
+    "diseases": [
+      {
+        "name": "Powdery Mildew",
+        "remedy": "Apply fungicides and maintain proper air circulation.",
+        "product": "Mildew Control Spray"
+      },
+      { "name": "Healthy", "remedy": "No specific remedy needed." }
+    ]
+  }
+]

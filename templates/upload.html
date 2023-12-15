@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="../static/styles/styles.css" />
     <title>Plantify - Upload Image</title>
   </head>
   <body>
@@ -48,7 +48,7 @@
                     onclick="setSelectedPlant('apple')"
                   />
                   <div class="image-container">
-                    <img src="images/apple.jpg" alt="Apple" />
+                    <img src="../images/apple.jpg" alt="Apple" />
                   </div>
                   <p>Apple</p>
                 </label>
@@ -66,7 +66,7 @@
                     onclick="setSelectedPlant('blueberry')"
                   />
                   <div class="image-container">
-                    <img src="images/blueberry.jpg" alt="Blueberry" />
+                    <img src="../images/blueberry.jpg" alt="Blueberry" />
                   </div>
                   <p>Blueberry</p>
                 </label>
@@ -84,7 +84,7 @@
                     onclick="setSelectedPlant('cherry')"
                   />
                   <div class="image-container">
-                    <img src="images/cherry.jpg" alt="Cherry" />
+                    <img src="../images/cherry.jpg" alt="Cherry" />
                   </div>
                   <p>Cherry</p>
                 </label>
@@ -102,7 +102,7 @@
                     onclick="setSelectedPlant('corn')"
                   />
                   <div class="image-container">
-                    <img src="images/corn.jpg" alt="Corn" />
+                    <img src="../images/corn.jpg" alt="Corn" />
                   </div>
                   <p>Corn</p>
                 </label>
@@ -120,7 +120,7 @@
                     onclick="setSelectedPlant('grape')"
                   />
                   <div class="image-container">
-                    <img src="images/grape.jpg" alt="Grape" />
+                    <img src="../images/grape.jpg" alt="Grape" />
                   </div>
                   <p>Grape</p>
                 </label>
@@ -138,7 +138,7 @@
                     onclick="setSelectedPlant('orange')"
                   />
                   <div class="image-container">
-                    <img src="images/orange.jpg" alt="Orange" />
+                    <img src="../images/orange.jpg" alt="Orange" />
                   </div>
                   <p>Orange</p>
                 </label>
@@ -156,7 +156,7 @@
                     onclick="setSelectedPlant('peach')"
                   />
                   <div class="image-container">
-                    <img src="images/peach.jpg" alt="Peach" />
+                    <img src="../images/peach.jpg" alt="Peach" />
                   </div>
                   <p>Peach</p>
                 </label>
@@ -174,7 +174,7 @@
                     onclick="setSelectedPlant('pepper')"
                   />
                   <div class="image-container">
-                    <img src="images/pepper.jpg" alt="Pepper" />
+                    <img src="../images/pepper.jpg" alt="Pepper" />
                   </div>
                   <p>Pepper</p>
                 </label>
@@ -192,7 +192,7 @@
                     onclick="setSelectedPlant('potato')"
                   />
                   <div class="image-container">
-                    <img src="images/potato.jpg" alt="Potato" />
+                    <img src="../images/potato.jpg" alt="Potato" />
                   </div>
                   <p>Potato</p>
                 </label>
@@ -210,7 +210,7 @@
                     onclick="setSelectedPlant('raspberry')"
                   />
                   <div class="image-container">
-                    <img src="images/raspberry.jpg" alt="Raspberry" />
+                    <img src="../images/raspberry.jpg" alt="Raspberry" />
                   </div>
                   <p>Raspberry</p>
                 </label>
@@ -218,7 +218,7 @@
             </div>
             
             <!-- Soybean -->
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
               <div class="plant-option" onclick="showPlantImage('soybean')">
                 <label>
                   <input
@@ -228,15 +228,15 @@
                     onclick="setSelectedPlant('soybean')"
                   />
                   <div class="image-container">
-                    <img src="images/soyabean.jpg" alt="Soybean" />
+                    <img src="../images/soyabean.jpg" alt="Soybean" />
                   </div>
                   <p>Soybean</p>
                 </label>
               </div>
             </div>
-            
+             -->
             <!-- Squash -->
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
               <div class="plant-option" onclick="showPlantImage('squash')">
                 <label>
                   <input
@@ -246,12 +246,12 @@
                     onclick="setSelectedPlant('squash')"
                   />
                   <div class="image-container">
-                    <img src="images/squash.jpg" alt="Squash" />
+                    <img src="../images/squash.jpg" alt="Squash" />
                   </div>
                   <p>Squash</p>
                 </label>
               </div>
-            </div>
+            </div> -->
             
             <!-- Strawberry -->
             <div class="col-md-3">
@@ -264,7 +264,7 @@
                     onclick="setSelectedPlant('strawberry')"
                   />
                   <div class="image-container">
-                    <img src="images/strawberry.jpg" alt="Strawberry" />
+                    <img src="../images/strawberry.jpg" alt="Strawberry" />
                   </div>
                   <p>Strawberry</p>
                 </label>
@@ -282,7 +282,7 @@
                     onclick="setSelectedPlant('tomato')"
                   />
                   <div class="image-container">
-                    <img src="images/tomato.jpg" alt="Tomato" />
+                    <img src="../images/tomato.jpg" alt="Tomato" />
                   </div>
                   <p>Tomato</p>
                 </label>
@@ -319,7 +319,7 @@
       // Function to display the selected plant image
       function showPlantImage(plantType) {
         const imageContainer = document.getElementById("selected-plant-image");
-        const imagePath = `images/${plantType}.jpg`; // Assuming images are named after plant types
+        const imagePath = `../images/${plantType}.jpg`; // Assuming images are named after plant types
         imageContainer.innerHTML = `<img src="${imagePath}" alt="${plantType}">`;
 
         // Set the selected plant type in the hidden input field

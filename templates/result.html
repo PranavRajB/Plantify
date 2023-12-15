@@ -1,0 +1,32 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result Page</title>
+    <!-- Add any additional CSS stylesheets if needed -->
+  </head>
+  <body>
+    <h1>Result Page</h1>
+
+    <!-- Display a loading icon while waiting for the results -->
+    <div id="loading-icon" style="display: none">
+      <img
+        src="{{ url_for('static', filename='loading.gif') }}"
+        alt="Loading Icon"
+      />
+      <p>Loading...</p>
+    </div>
+
+    <!-- Display the result once it's available -->
+    <div id="result-content" style="display: none">
+      <h3>Predicted Disease: <span id="predicted-disease"></span></h3>
+      <p>Remedy: <span id="remedy"></span></p>
+      <img id="product-image" src="" alt="Product Image" />
+    </div>
+
+    <!-- Add any additional JavaScript scripts if needed -->
+    <script src="{{ url_for('static', filename='result.js') }}"></script>
+  </body>
+</html>
