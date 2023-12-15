@@ -1,32 +1,44 @@
-<!-- result.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Result Page</title>
-    <!-- Add any additional CSS stylesheets if needed -->
+    <title>Plantify - Result</title>
+    <link rel="stylesheet" href="../static/styles/styles.css" />
   </head>
   <body>
-    <h1>Result Page</h1>
+    <header>
+      <h1>Plantify</h1>
+      <p>A place to identify plant diseases and find remedies</p>
+    </header>
 
-    <!-- Display a loading icon while waiting for the results -->
-    <div id="loading-icon" style="display: none">
-      <img
-        src="{{ url_for('static', filename='loading.gif') }}"
-        alt="Loading Icon"
-      />
-      <p>Loading...</p>
-    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="upload.html">Upload Image</a></li>
+        <li><a href="result.html">Result</a></li>
+        <li><a href="explore.html">Explore Products</a></li>
+      </ul>
+    </nav>
 
-    <!-- Display the result once it's available -->
-    <div id="result-content" style="display: none">
-      <h3>Predicted Disease: <span id="predicted-disease"></span></h3>
-      <p>Remedy: <span id="remedy"></span></p>
-      <img id="product-image" src="" alt="Product Image" />
-    </div>
+    <main>
+      <section id="result-section" class="container">
+        <h2>Result Page</h2>
+        <p>Predicted Disease: {{ predicted_disease }}</p>
+        <p>Remedy: {{ remedy.remedy }}</p>
 
-    <!-- Add any additional JavaScript scripts if needed -->
-    <script src="{{ url_for('static', filename='result.js') }}"></script>
+        <!-- Add other fields from the remedy object as needed -->
+        <div id="product-image-container">
+          <img
+            src="{{ url_for('static', filename=remedy.image) }}"
+            alt="Product Image"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Plantify</p>
+    </footer>
   </body>
 </html>

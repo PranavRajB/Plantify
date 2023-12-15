@@ -331,19 +331,15 @@
         document.getElementById("plant-type-input").value = plantType;
       }
 
-      // Function to submit the form
-      // Function to submit the form
       function submitForm() {
         const selectedPlant = document.getElementById("plant-type-input").value;
         const selectedImage = document.getElementById("image-input").files[0];
 
         if (selectedPlant && selectedImage) {
-          // Create a FormData object to send the data as a multipart/form-data
           const formData = new FormData();
           formData.append("plant_type", selectedPlant);
           formData.append("image", selectedImage);
 
-          // Make a POST request to the Flask backend using fetch
           fetch("http://localhost:3000/upload", {
             method: "POST",
             body: formData,
@@ -353,7 +349,8 @@
               // Handle the response from the backend
               console.log("Response from backend:", data);
 
-              // Optionally, you can redirect to the result page or perform other actions
+              // Redirect to the result page
+              window.location.href = "/result";
             })
             .catch((error) => {
               console.error("Error communicating with the backend:", error);
@@ -362,6 +359,7 @@
           alert("Please select a plant type and upload an image.");
         }
       }
+
     </script>
   </body>
 </html>

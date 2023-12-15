@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_pymongo import PyMongo
 import pickle
-
+import cv2
+import matplotlib.pyplot as plt
+import  numpy as np
+from predict_disease import prediction_disease_type
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017"
 mongo = PyMongo(app)
@@ -24,15 +27,30 @@ def upload():
         # Assuming you have an image file uploaded
         uploaded_image = request.files['image']
         plant_type = request.form['plant_type']
+        file = request.files['file']
 
-        # Load the corresponding model for the plant type
-        model_path = f'models/{plant_type}_model.pkl'
-        model = load_model(model_path)
+        if file.filename == '':
+            return 'No selected file', 400
 
-        # Preprocess the image and make predictions (replace with actual logic)
-        preprocessed_image = preprocess_image(uploaded_image)
-        predicted_disease = model.predict(preprocessed_image)
+        # Save the file to a temporary location
+        file_path = 'uploads/' + file.filename
+        file.save(file_path)
 
+
+        # # Load the corresponding model for the plant type
+        # model_path = 'C:\Users\Ramkrishna\Desktop\Plantify\models\model_weightsInceptionACC96.pkl'
+        # model = load_model(model_path)
+
+        # # Preprocess the image and make predictions (replace with actual logic)
+        # preprocessed_image = preprocess_image(uploaded_image)
+        # predicted_disease = model.predict(preprocessed_image)
+        img = cv2.imread(file_path)
+
+        disease_class = prediction_disease_type(img,"Peach")
+        class_label=disease_class.get_label()
+        dis=class_label[0][1]
+        predicted_disease='Anthracnose'
+        # print()
         # Fetch corresponding remedy and product image from MongoDB
         remedy = mongo.db.remedies.find_one({"disease": predicted_disease})
 
