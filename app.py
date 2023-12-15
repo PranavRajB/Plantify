@@ -25,9 +25,8 @@ def home():
 def upload():
     if request.method == 'POST':
         # Assuming you have an image file uploaded
-        uploaded_image = request.files['image']
         plant_type = request.form['plant_type']
-        file = request.files['file']
+        file = request.files['image']
 
         if file.filename == '':
             return 'No selected file', 400
@@ -53,9 +52,10 @@ def upload():
         # print()
         # Fetch corresponding remedy and product image from MongoDB
         remedy = mongo.db.remedies.find_one({"disease": predicted_disease})
+        print('Redirecting to result page')
 
         # Redirect to the result page, passing necessary data
-        return redirect(url_for('result', predicted_disease=predicted_disease, remedy=remedy))
+        return redirect(url_for('result.html', predicted_disease=predicted_disease, remedy=remedy))
 
     return render_template('upload.html')
 

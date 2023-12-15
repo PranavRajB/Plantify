@@ -340,7 +340,7 @@
           formData.append("plant_type", selectedPlant);
           formData.append("image", selectedImage);
 
-          fetch("http://localhost:3000/upload", {
+          fetch("http://127.0.0.1:5000/upload", {
             method: "POST",
             body: formData,
           })
