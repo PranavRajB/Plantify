@@ -20,7 +20,7 @@ def load_model(model_path):
     return model
 
 # Home route
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('index.html')
 
