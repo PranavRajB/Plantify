@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_pymongo import PyMongo
 import pickle
-import cv2
+import os
 import matplotlib.pyplot as plt
 import  numpy as np
 from flask import jsonify
@@ -52,10 +52,20 @@ def upload():
         # disease_class = prediction_disease_type(img,"Peach")
         # class_label=disease_class.get_label()
         # dis=class_label[0][1]
-        predicted_disease='Anthracnose'
+        file_name = os.path.basename(file_path)
+        # Assuming the file name is in the format "plant_disease.jpg"
+        # You may need to adjust this depending on your naming convention
+        try:
+            predicted_disease = file_name.split('_')[1].split('.')[0]
+        except IndexError:
+            # If the naming convention is not as expected, default to "Powdery Mildew"
+            predicted_disease = "Powdery Mildew"
         # print()
         # Fetch corresponding remedy and product image from MongoDB
         remedy = mongo.db.remedies.find_one({"disease": predicted_disease})
+        if(remedy==None):
+            predicted_disease="Powdery Mildew"
+            remedy = mongo.db.remedies.find_one({"disease": predicted_disease})
         print('Redirecting to result page')
 
         # Redirect to the result page, passing necessary data

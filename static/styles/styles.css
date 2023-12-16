@@ -11,15 +11,15 @@ body {
 }
 
 header {
-  background-color: rgba(76, 175, 80, 0.9);
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #027a1a;
   text-align: center;
   padding: 20px;
 }
 
 nav {
   background-color: #4caf50; /* Updated to a green color */
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   padding: 10px;
 }

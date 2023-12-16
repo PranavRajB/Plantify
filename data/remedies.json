@@ -88,5 +88,11 @@
     "remedy": "Apply fungicides and practice good garden hygiene.",
     "product": "Anthracnose Shield",
     "image": "static/images/anthracnose_raspberry_product_image.jpg"
+  },
+  {
+    "disease": "Healthy",
+    "remedy": "Your plant looks fine no need of remedy. Just follow some good crop rotation practices",
+    "product": "None",
+    "image": "static/images/healthy.jpeg"
   }
 ]
