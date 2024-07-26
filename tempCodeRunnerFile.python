@@ -1,0 +1,23 @@
+import os
+
+def list_files_one_level(directory):
+    for root, dirs, files in os.walk(directory):
+        level = root.replace(directory, '').count(os.sep)
+        if level == 0:
+            # Print files in the main directory
+            print(f"Files in directory '{root}':")
+            for file in files:
+                print(f"    {file}")
+        elif level == 1:
+            # Print files in the first level of subdirectories
+            subdirectory = os.path.basename(root)
+            print(f"\nFiles in subdirectory '{subdirectory}':")
+            for file in files:
+                print(f"    {file}")
+        else:
+            # Do not go deeper
+            continue
+
+# Replace with your directory path
+directory = "C:\\Users\\Ramkrishna\\Desktop\\Plantify"
+list_files_one_level(directory)

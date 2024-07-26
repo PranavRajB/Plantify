@@ -1,96 +1,228 @@
 [
   {
-    "disease": "Scab",
+    "disease": "Apple___Cedar_apple_rust",
+    "remedy": "Remove nearby junipers, prune infected branches, apply fungicides.",
+    "product": " Myclobutanil (Immunox), Mancozeb.",
+    "image": "static/images/myclobutanil.jpeg"
+  },
+  {
+    "disease": "Apple___healthy",
+    "remedy": "Your plant looks fine no need of remedy. Just follow some good crop rotation practices",
+    "product": "None",
+    "image": "static/images/healthy.jpeg"
+  },
+  {
+    "disease": "Blueberry___healthy",
+    "remedy": "Your plant looks fine no need of remedy. Just follow some good crop rotation practices",
+    "product": "None",
+    "image": "static/images/healthy.jpeg"
+  },
+  {
+    "disease": "Cherry_(including_sour)___Powdery_mildew",
+    "remedy": "Prune and remove infected parts, improve air circulation, apply fungicides.",
+    "product": "Sulfur-based fungicides, Neem oil.",
+    "image": "static/images/mildew_product_image.jpg"
+  },
+  {
+    "disease": "Cherry_(including_sour)___healthy",
+    "remedy": "Your plant looks fine no need of remedy. Just follow some good crop rotation practices",
+    "product": "None",
+    "image": "static/images/healthy.jpeg"
+  },
+  {
+    "disease": "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot",
+    "remedy": "Crop rotation, resistant hybrids, tillage, fungicides",
+    "product": " Strobilurin fungicides",
+    "image": "static/images/Azoxystrobin.jpeg"
+  },
+  {
+    "disease": "Corn_(maize)___Northern_Leaf_Blight",
+    "remedy": "Crop rotation, resistant hybrids, fungicides.",
+    "product": " Triazole fungicides",
+    "image": "static/images/Propiconazole.jpg"
+  },
+  {
+    "disease": "Corn_(maize)___healthy",
+    "remedy": "Your plant looks fine no need of remedy. Just follow some good crop rotation practices",
+    "product": "None",
+    "image": "static/images/healthy.jpeg"
+  },
+  {
+    "disease": "Grape___Black_rot",
+    "remedy": "Prune and remove infected parts, fungicides, improve air circulation.",
+    "product": "Mancozeb",
+    "image": "static/images/Mancozeb.jpeg"
+  },
+  {
+    "disease": "Grape___Esca_(Black_Measles)",
+    "remedy": "Remove and destroy infected vines, improve soil drainage.",
+    "product": "Use a systemic fungicide",
+    "image": "static/images/black_rot_product_image.jpg"
+  },
+  {
+    "disease": "Grape___healthy",
+    "remedy": "Your plant looks fine no need of remedy. Just follow some good crop rotation practices",
+    "product": "None",
+    "image": "static/images/healthy.jpeg"
+  },
+  {
+    "disease": "Peach___healthy",
+    "remedy": "Your plant looks fine no need of remedy. Just follow some good crop rotation practices",
+    "product": "None",
+    "image": "static/images/healthy.jpeg"
+  },
+  {
+    "disease": "Pepper,_bell___Bacterial_spot",
+    "remedy": "Apply fungicides such as sulfur or copper-based sprays.",
+    "product": "Copper fungicide",
+    "image": "static/images/bacterial_spot_product_image.jpg"
+  },
+  {
+    "disease": "Pepper,_bell___healthy",
+    "remedy": "Your plant looks fine no need of remedy. Just follow some good crop rotation practices",
+    "product": "None",
+    "image": "static/images/healthy.jpeg"
+  },
+  {
+    "disease": "Potato___healthy",
+    "remedy": "Placeholder remedy for Potato___healthy",
+    "product": "Placeholder product for Potato___healthy",
+    "image": "static/images/healthy.jpeg"
+  },
+  {
+    "disease": "Soybean___healthy",
+    "remedy": "Placeholder remedy for Soybean___healthy",
+    "product": "Placeholder product for Soybean___healthy",
+    "image": "static/images/healthy.jpeg"
+  },
+  {
+    "disease": "Strawberry___Leaf_scorch",
+    "remedy": "Remove infected leaves, improve air circulation, fungicides.",
+    "product": "Mancozeb",
+    "image": "static/images/Mancozeb.jpeg"
+  },
+  {
+    "disease": "Strawberry___healthy",
+    "remedy": "Placeholder remedy for Strawberry___healthy",
+    "product": "Placeholder product for Strawberry___healthy",
+    "image": "static/images/healthy.jpeg"
+  },
+  {
+    "disease": "Tomato___Bacterial_spot",
+    "remedy": "Remove infected plants, crop rotation, copper-based sprays.",
+    "product": "Copper fungicide",
+    "image": "static/images/bacterial_spot_product_image.jpg"
+  },
+  {
+    "disease": "Tomato___Early_blight",
+    "remedy": "Crop rotation, resistant varieties, fungicides",
+    "product": "Chlorothalonil",
+    "image": "static/images/Chlorothalonil.jpeg"
+  },
+  {
+    "disease": "Tomato___Late_blight",
+    "remedy": "Crop rotation, resistant varieties, fungicides",
+    "product": "Chlorothalonil",
+    "image": "static/images/Chlorothalonil.jpeg"
+  },
+  {
+    "disease": "Tomato___Target_Spot",
+    "remedy": "Crop rotation, improve air circulation, fungicides.",
+    "product": "Placeholder product for Tomato___Target_Spot",
+    "image": "static/images/Azoxystrobin.jpeg"
+  },
+  {
+    "disease": "Apple___Apple_scab",
     "remedy": "Apply fungicides such as sulfur or copper-based sprays.",
     "product": "Fungicide XYZ",
     "image": "static/images/scab_product_image.jpg"
   },
   {
-    "disease": "Black Rot",
+    "disease": "Apple___Black_rot",
     "remedy": "Prune infected branches and apply fungicides during the growing season.",
     "product": "Anti-Rot Solution",
     "image": "static/images/black_rot_product_image.jpg"
   },
   {
-    "disease": "Rust",
+    "disease": "Corn_(maize)___Common_rust_",
     "remedy": "Use fungicides and practice good garden hygiene.",
     "product": "Rust Control Spray",
     "image": "static/images/rust_product_image.jpg"
   },
   {
-    "disease": "Powdery Mildew",
+    "disease": "Squash___Powdery_mildew",
     "remedy": "Apply fungicides and maintain proper air circulation.",
     "product": "Anti-Mildew Spray",
     "image": "static/images/mildew_product_image.jpg"
   },
   {
-    "disease": "Leaf Blight",
+    "disease": "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)",
     "remedy": "Practice good garden hygiene and use resistant varieties.",
     "product": "Blight Defense Spray",
     "image": "static/images/leaf_blight_product_image.jpg"
   },
   {
-    "disease": "Bacterial Spot",
+    "disease": "Peach___Bacterial_spot",
     "remedy": "Apply copper-based sprays and practice good garden hygiene.",
     "product": "Spotless Protector Spray",
     "image": "static/images/bacterial_spot_product_image.jpg"
   },
   {
-    "disease": "Early Blight",
+    "disease": "Potato___Early_blight",
     "remedy": "Apply fungicides, practice crop rotation, and remove infected plant parts.",
     "product": "Early Blight Banisher",
     "image": "static/images/early_blight_product_image.jpg"
   },
   {
-    "disease": "Late Blight",
+    "disease": "Potato___Late_blight",
     "remedy": "Apply fungicides, practice crop rotation, and remove infected plant parts.",
     "product": "Late Blight Guardian",
     "image": "static/images/late_blight_product_image.jpg"
   },
   {
-    "disease": "Leaf Mold",
+    "disease": "Tomato___Leaf_Mold",
     "remedy": "Provide good air circulation, avoid overhead watering.",
     "product": "Mold Control Spray",
     "image": "static/images/leaf_mold_product_image.jpg"
   },
   {
-    "disease": "Septoria Leaf Spot",
+    "disease": "Tomato___Septoria_leaf_spot",
     "remedy": "Apply fungicides and practice good garden hygiene.",
     "product": "Septoria Shield",
     "image": "static/images/septoria_leaf_spot_product_image.jpg"
   },
   {
-    "disease": "Spider Mite",
+    "disease": "Tomato___Spider_mites Two-spotted_spider_mite",
     "remedy": "Use insecticidal soap, neem oil, or predatory mites.",
     "product": "Mite Terminator",
     "image": "static/images/spider_mite_product_image.jpg"
   },
   {
-    "disease": "Yellow Leaf Curl Virus",
+    "disease": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
     "remedy": "Use disease-resistant varieties and control whiteflies.",
     "product": "Virus Shield",
     "image": "static/images/yellow_leaf_curl_virus_product_image.jpg"
   },
   {
-    "disease": "Mosaic Virus",
+    "disease": "Tomato___Tomato_mosaic_virus",
     "remedy": "Control aphids and practice good garden hygiene.",
     "product": "Mosaic Virus Defender",
     "image": "static/images/mosaic_virus_product_image.jpg"
   },
   {
-    "disease": "Citrus Canker",
+    "disease": "Orange___Haunglongbing_(Citrus_greening)",
     "remedy": "Prune and destroy infected plant parts, apply copper-based sprays.",
     "product": "Canker Terminator Spray",
     "image": "static/images/citrus_canker_product_image.jpg"
   },
   {
-    "disease": "Anthracnose",
+    "disease": "Raspberry___healthy",
     "remedy": "Apply fungicides and practice good garden hygiene.",
     "product": "Anthracnose Shield",
     "image": "static/images/anthracnose_raspberry_product_image.jpg"
   },
   {
-    "disease": "Healthy",
+    "disease": "Tomato___healthy",
     "remedy": "Your plant looks fine no need of remedy. Just follow some good crop rotation practices",
     "product": "None",
     "image": "static/images/healthy.jpeg"
